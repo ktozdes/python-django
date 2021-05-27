@@ -2,7 +2,12 @@
 *.log
 *.pot
 *.pyc
+**/.DS_Store
 __pycache__
+node_modules
+
+app/static/css/index.css
+app/static/js/main.js
 
 # celery 
 celerybeat-schedule.* 
