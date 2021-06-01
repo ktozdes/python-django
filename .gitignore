@@ -6,8 +6,8 @@
 __pycache__
 node_modules
 
-app/static/css/index.css
-app/static/js/main.js
+app/static/css/*
+app/static/js/*
 
 # celery 
 celerybeat-schedule.* 
