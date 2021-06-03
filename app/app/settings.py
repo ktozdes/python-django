@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'core',
 
     'polls.apps.PollsConfig',
+    'menus.apps.MenusConfig',
     
 ]
 
