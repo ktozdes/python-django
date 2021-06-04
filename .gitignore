@@ -13,4 +13,5 @@ app/static/js/*
 celerybeat-schedule.* 
 
 # Environments 
-.env* 
+.env*
+package-lock.json 
