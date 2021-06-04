@@ -41,6 +41,8 @@ INSTALLED_APPS = [
 
     'polls.apps.PollsConfig',
     'menus.apps.MenusConfig',
+
+    'tinymce',
     
 ]
 
