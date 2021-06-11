@@ -39,8 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'core',
 
-    'polls.apps.PollsConfig',
     'menus.apps.MenusConfig',
+    'news.apps.NewsConfig',
 
     'tinymce',
     
@@ -74,9 +74,16 @@ TEMPLATES = [
     },
 ]
 
+DEFAULT_AUTO_FIELD='django.db.models.AutoField'
+
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = 'media/'
+
+
 
 WSGI_APPLICATION = 'app.wsgi.application'
 

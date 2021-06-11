@@ -6,9 +6,12 @@
         <script type="text/javascript" src="{% static 'js/vendors.js' %}"></script>
         <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
         <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+        {% block custom_js %}
+        {% endblock custom_js %}
     </head>
 
     <body>
+
     {% block content %}
     
     {% endblock content %}
