@@ -39,8 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'core',
 
-    'menus.apps.MenusConfig',
-    'news.apps.NewsConfig',
+    'menus',
+    'news',
 
     'tinymce',
     
