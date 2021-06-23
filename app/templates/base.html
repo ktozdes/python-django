@@ -1,19 +1,28 @@
 {% load static %}
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>My Project</title>
-        <script type="text/javascript" src="{% static 'js/vendors.js' %}"></script>
-        <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
-        <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
-        {% block custom_js %}
-        {% endblock custom_js %}
-    </head>
+<head>
+    <title>My Project</title>
+    <script type="text/javascript" src="{% static 'js/vendors.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+    {% block custom_js %}
+    {% endblock custom_js %}
+</head>
+<body >
+    <div class="container-fluid">
+        {% include "partials/main_menu.html" %}
 
-    <body>
+        {% block left_sidebar %}
+        {% endblock left_sidebar %}
 
-    {% block content %}
-    
-    {% endblock content %}
-    </body>
+        {% block content %}
+        {% endblock content %}
+
+        {% block right_sidebar %}
+        {% endblock right_sidebar %}
+
+        {% include "partials/footer.html" %}
+    </div>
+</body>
 </html>
