@@ -12,15 +12,16 @@
 <body >
     <div class="container-fluid">
         {% include "partials/main_menu.html" %}
+        <main class="row g-5">
+            {% block left_sidebar %}
+            {% endblock left_sidebar %}
 
-        {% block left_sidebar %}
-        {% endblock left_sidebar %}
+            {% block content %}
+            {% endblock content %}
 
-        {% block content %}
-        {% endblock content %}
-
-        {% block right_sidebar %}
-        {% endblock right_sidebar %}
+            {% block right_sidebar %}
+            {% endblock right_sidebar %}
+        </main>
 
         {% include "partials/footer.html" %}
     </div>

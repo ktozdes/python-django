@@ -39,10 +39,13 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'core',
 
+    # third pary libraries
+    'tinymce',
+    'django_seed',
+
+    # custom apps
     'menus',
     'news',
-
-    'tinymce',
     
 ]
 

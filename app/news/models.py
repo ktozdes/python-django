@@ -11,7 +11,7 @@ NEWS_STATUS_CHOICES = (
 # Create your models here.
 class Category(models.Model):
     name = models.CharField(max_length=255)
-    slug = models.SlugField(max_length=255, null=True, blank = True)
+    slug = models.SlugField(max_length=255, unique=True, null=True, blank=True)
     rank = models.IntegerField(default=0, null=True)
     is_active = models.BooleanField(default=True)
     created_at = models.DateTimeField(null=True, auto_now_add=True)
@@ -31,13 +31,14 @@ class Category(models.Model):
 
 class News(models.Model):
     name = models.CharField(max_length=255)
-    slug = models.SlugField(max_length=255, null=True, blank = True)
+    slug = models.SlugField(max_length=255, unique=True, null=True, blank=True)
     content = HTMLField(null=True)
     position = models.IntegerField(default=0, null=True)
     status = models.CharField(max_length = 10, choices = NEWS_STATUS_CHOICES,
                                                       default ='published')
     is_active = models.BooleanField(default=True)
     is_featured = models.BooleanField(default=False)
+    view_count = models.IntegerField(default=0, null=True)
     created_at = models.DateTimeField(null=True, auto_now_add=True)
     updated_at = models.DateTimeField(null=True, auto_now=True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE, null=True)
